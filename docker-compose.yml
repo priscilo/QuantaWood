@@ -1,0 +1,56 @@
+version: "3.9"
+
+services:
+  # 🟢 Base de datos PostgreSQL
+  db:
+    image: postgres:16
+    container_name: quantawood_db
+    restart: always
+    environment:
+      POSTGRES_DB: quantawood
+      POSTGRES_USER: qw_user
+      POSTGRES_PASSWORD: qw_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+
+  # 🟣 Backend - Spring Boot
+  backend:
+    build: ./backend
+    container_name: quantawood_backend
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/quantawood
+      SPRING_DATASOURCE_USERNAME: qw_user
+      SPRING_DATASOURCE_PASSWORD: qw_pass
+      JWT_SECRET: TuSecretoMuySegur0
+      SPRING_PROFILES_ACTIVE: prod
+    ports:
+      - "8080:8080"
+    restart: always
+
+  # 🟠 Frontend (React / Vite)
+  frontend:
+    build: ./frontend
+    container_name: quantawood_frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8080
+    depends_on:
+      - backend
+    command: ["npm", "run", "dev"]
+
+  # ⚪ (Opcional) Nginx como proxy inverso
+  nginx:
+    image: nginx:alpine
+    container_name: quantawood_nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - frontend

@@ -1,0 +1,27 @@
+.btn {
+    font-family: 'Inter', sans-serif;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #004D40;
+    /* español */
+    color: white;
+}
+
+.btn-ghost {
+    background-color: transparent;
+    border: 2px solid #004D40;
+    color: #004D40;
+}
+
+[data-lang="en"] .btn-primary {
+    background-color: #1E3A8A;
+}
+
+[data-lang="pt"] .btn-primary {
+    background-color: #6A1B9A;
+}

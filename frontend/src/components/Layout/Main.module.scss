@@ -1,0 +1,21 @@
+.main {
+    padding: 2rem;
+    min-height: 60vh;
+    background-color: var(--main-bg, #ffffff);
+    color: var(--main-text, #222);
+}
+
+.fallback {
+    font-style: italic;
+    color: #999;
+}
+
+.theme--quantawood {
+    --main-bg: #121212;
+    --main-text: #eeeeee;
+}
+
+.theme--orion {
+    --main-bg: #001f27;
+    --main-text: #cddfe0;
+}

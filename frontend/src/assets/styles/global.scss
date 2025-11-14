@@ -1,0 +1,66 @@
+// 🌐 Variables visuales por cultura/idioma
+$color-primary: #0f172a; // azul institucional Quantawood
+$color-accent: #f59e0b; // ámbar para resaltes
+$color-bg: #f8fafc; // fondo claro
+$color-text: #1e293b; // texto principal
+
+$font-base: 'Inter', sans-serif;
+$font-size-base: 16px;
+
+// 🧱 Reset defensivo
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// 📐 Tipografía base
+body {
+    font-family: $font-base;
+    font-size: $font-size-base;
+    background-color: $color-bg;
+    color: $color-text;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+// 🧩 Títulos
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    color: $color-primary;
+}
+
+// 📦 Contenedores
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+// 🔗 Enlaces
+a {
+    color: $color-accent;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// 🧪 Utilidades defensivas
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 0.5rem;
+}

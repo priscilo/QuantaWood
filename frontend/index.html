@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Quantawood: trazabilidad y análisis de productos madereros." />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- 🔐 Política CSP defensiva -->
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self' 'unsafe-eval';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data:;
+               font-src 'self';
+               connect-src 'self' ws://localhost:5173;
+               object-src 'none';
+               base-uri 'self';" />
+
+    <title>Quantawood el mejor</title>
+  </head>
+  <body>
+    <!-- 🔗 Punto de montaje React -->
+    <div id="root"></div>
+
+    <!-- 🚀 Script principal compilado por Vite -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- 💬 Bienvenida visual modular -->
+    <section class="bienvenida">
+      <h1>Bienvenido a <strong>Quantawood</strong></h1>
+      <p>Este sistema permite gestionar inventario, trazabilidad y análisis de productos madereros.</p>
+      <ul>
+        <li>🔍 Seguimiento por <strong>lote</strong> y <strong>especie</strong></li>
+        <li>📦 Control de <strong>stock en tiempo real</strong></li>
+        <li>📊 Reportes <strong>visuales y exportables</strong></li>
+      </ul>
+    </section>
+
+    <!-- 🎨 Estilos defensivos para evitar inline -->
+    <style>
+      .bienvenida {
+        padding: 2rem;
+        font-family: system-ui, sans-serif;
+        max-width: 600px;
+        margin: auto;
+        font-size: 1.1rem;
+      }
+
+      .bienvenida ul {
+        list-style: none;
+        padding-left: 0;
+      }
+    </style>
+  </body>
+</html>

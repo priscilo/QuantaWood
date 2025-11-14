@@ -1,0 +1,19 @@
+.header {
+    padding: 1rem 2rem;
+    background-color: var(--header-bg, #f0f0f0);
+    color: var(--header-text, #333);
+    border-bottom: 1px solid var(--header-border, #ccc);
+    text-align: center;
+}
+
+.theme--quantawood {
+    --header-bg: #1e1e1e;
+    --header-text: #f5f5f5;
+    --header-border: #444;
+}
+
+.theme--orion {
+    --header-bg: #002b36;
+    --header-text: #93a1a1;
+    --header-border: #073642;
+}

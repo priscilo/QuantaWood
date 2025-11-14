@@ -1,0 +1,27 @@
+.footer {
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+    background-color: var(--footer-bg, #f9f9f9);
+    color: var(--footer-text, #444);
+    border-top: 1px solid var(--footer-border, #ddd);
+}
+
+/* 🌙 Temas visuales */
+.theme--default {
+    --footer-bg: #f9f9f9;
+    --footer-text: #444;
+    --footer-border: #ddd;
+}
+
+.theme--quantawood {
+    --footer-bg: #1e1e1e;
+    --footer-text: #cccccc;
+    --footer-border: #444;
+}
+
+.theme--orion {
+    --footer-bg: #002b36;
+    --footer-text: #93a1a1;
+    --footer-border: #073642;
+}

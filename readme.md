@@ -56,25 +56,7 @@ Quantawood/
 └─ README.md               # Este archivo 💚
 ```
 
----
 
-## 🧱 Diagramas de arquitectura
-
-### 🏗️ Diagrama general del sistema
-
-```mermaid
-graph TD
-A[Frontend (React/Vite)] -->|HTTP REST| B[Backend (Spring Boot)]
-B -->|JPA / Hibernate| C[(PostgreSQL)]
-B --> D[PDF & QR Generator]
-B --> E[Authentication Service (JWT)]
-A -->|Fetch Data| E
-```
-
-**Descripción:**
-El frontend se comunica con la API REST del backend. El backend gestiona los datos mediante JPA en PostgreSQL y genera reportes PDF con QR. La autenticación se maneja con tokens JWT.
-
----
 
 ### 🪵 Diagrama entidad-relación (simplificado)
 

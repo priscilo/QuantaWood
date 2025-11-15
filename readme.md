@@ -114,8 +114,13 @@ sequenceDiagram
 ## 🐳 Despliegue rápido con Docker
 
 ```bash
-git clone https://github.com/tu-organizacion/quantawood.git
-cd quantawood
+# Clonar el repositorio desde GitHub
+git clone https://github.com/priscilo/QuantaWood.git
+
+# Entrar al directorio del proyecto
+cd QuantaWood
+
+# Levantar los servicios con Docker Compose
 docker-compose up --build
 ```
 
